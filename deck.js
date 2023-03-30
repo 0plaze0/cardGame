@@ -8,6 +8,12 @@ export default class Deck{
     get lengthOfDeck(){
         return this.cards.length;
     }
+    pop(){
+        return this.cards.shift();
+    }
+    push(card){
+        this.cards.push(card);
+    }
     suffle(){
         for(let i=this.lengthOfDeck; i>0; i--){
             let newIndex = Math.floor(Math.random()*(i+1));
